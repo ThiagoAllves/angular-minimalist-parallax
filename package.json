@@ -1,0 +1,32 @@
+{
+  "name": "angular-minimalist-parallax",
+  "version": "1.0.0",
+  "description": "If you need more subtlety or just want to get out of the old background-attachment: fixed, get to know the angular-minimalist-parallax",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && ngc",
+    "build-win": "rmdir /Q /S dist && ngc",
+    "prepublish": "ngc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoAllves/angular-minimalist-parallax.git"
+  },
+  "keywords": [
+    "ionic2",
+    "ionic3",
+    "angular5",
+    "angular",
+    "6",
+    "minimalist-parallax",
+    "component"
+  ],
+  "author": "Thiago Alves <thiago@fasters.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiagoAllves/angular-minimalist-parallax/issues"
+  },
+  "homepage": "https://github.com/ThiagoAllves/angular-minimalist-parallax#readme"
+}
