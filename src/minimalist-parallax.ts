@@ -6,7 +6,7 @@ import { Directive, ElementRef, Renderer } from '@angular/core';
     '(ionScroll)':'onCntscroll($event)',
   }
 })
-export class ParallaxDirective {
+export class MinimalistParallax{
   constructor(
     public el:ElementRef,
     public re: Renderer) { }

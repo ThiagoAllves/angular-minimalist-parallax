@@ -1,0 +1,1 @@
+export { MinimalistParallaxModule } from './module';
