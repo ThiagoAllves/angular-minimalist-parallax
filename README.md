@@ -28,7 +28,9 @@
     ...
   })
   ```
+## Demo
 
+![Animated](Minimalist-Paralax.gif)
 
 ## Usage
 
