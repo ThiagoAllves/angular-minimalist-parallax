@@ -71,7 +71,9 @@ var MinimalistParallax = /** @class */ (function () {
         for (var /** @type {?} */ i = 0; i < this.backgrounds.length; i++) {
             var /** @type {?} */ background = this.backgrounds[i];
             var /** @type {?} */ style = background.currentStyle || window.getComputedStyle(background), /** @type {?} */
-            url = style.backgroundImage.slice(69, -1).replace(/"/g, "");
+            url = style.backgroundImage.replace(/"/g, "");
+            var /** @type {?} */ regExp = /\url\((.*?)\)/g;
+            url = regExp.exec(url)[1];
             var /** @type {?} */ imgFormat = new Image();
             imgFormat.onload = function () {
             };
