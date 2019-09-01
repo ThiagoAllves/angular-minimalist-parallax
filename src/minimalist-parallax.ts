@@ -42,7 +42,9 @@ export class MinimalistParallax{
     for (var i = 0; i < this.backgrounds.length; i++) {
       let background = this.backgrounds[i];
       var style = background.currentStyle || window.getComputedStyle(background),
-      url = style.backgroundImage.slice(69, -1).replace(/"/g, "");
+      url = style.backgroundImage.replace(/"/g, "");
+      var regExp = /\url\((.*?)\)/g;
+      url = regExp.exec(url)[1];
       var imgFormat = new Image();
       imgFormat.onload = function(){
       };
