@@ -1,15 +1,6 @@
 import { Component, Renderer, ElementRef} from '@angular/core';
 @Component({
   selector: '[minimalist-parallax]',
-  template: `
-  <div class="over">
-   <div class="bg"  [ngStyle]="{'background-image': 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url()'}">
-     <!-- <div class="child">
-       <h2>{{ text optional }}</h2>  
-     </div> -->
-   </div>
-  </div>
-  `,
   styles: [`
   over {
     overflow: hidden;
