@@ -28,9 +28,7 @@
     ...
   })
   ```
-## Demo
 
-![Animated](Minimalist-Paralax.gif)
 
 ## Usage
 
@@ -45,4 +43,15 @@ add the  `parallax` attribute  to the `<ion-content>` in your template:
   </div>
  </div>
 </ion-content>
+
+
 ```
+## Demo
+
+![Animated](Minimalist-Paralax.gif)
+
+## Donate
+
+
+[Help us develop and improve our plugins -->](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RECXAQV6G6W5N&source=url)
+
