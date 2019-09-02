@@ -122,6 +122,20 @@ eventsManager (){
       this.eventsManager();
     }
   }
+  async formatImg(background, ev){
+    var style = background.currentStyle || window.getComputedStyle(background),
+    url = style.backgroundImage.replace(/"/g, "");
+    var regExp = /\url\((.*?)\)/g;
+    url = regExp.exec(url)[1];
+    var imgFormat = new Image();
+    imgFormat.onload = function(){};
+    imgFormat.src = url;
+    var widthImg = imgFormat.width, heightImg = imgFormat.height, widthScreen = ev.contentWidth;
+    var resultVal = (heightImg*widthScreen)/widthImg;
+    var  parent = background.parentNode;
+    var result = (resultVal*0.65);
+    return {style,url,regExp,widthImg,heightImg,widthScreen,resultVal,parent,result,}
+  }
   async update(ev){
     for (var i = 0; i < this.backgrounds.length; i++) {
 
@@ -156,18 +170,5 @@ eventsManager (){
       return false;
     }
   }
-  async formatImg(background, ev){
-    var style = background.currentStyle || window.getComputedStyle(background),
-    url = style.backgroundImage.replace(/"/g, "");
-    var regExp = /\url\((.*?)\)/g;
-    url = regExp.exec(url)[1];
-    var imgFormat = new Image();
-    imgFormat.onload = function(){};
-    imgFormat.src = url;
-    var widthImg = imgFormat.width, heightImg = imgFormat.height, widthScreen = ev.contentWidth;
-    var resultVal = (heightImg*widthScreen)/widthImg;
-    var  parent = background.parentNode;
-    var result = (resultVal*0.65);
-    return {style,url,regExp,widthImg,heightImg,widthScreen,resultVal,parent,result,}
-  }
+  
 }

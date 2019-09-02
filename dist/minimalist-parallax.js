@@ -83,6 +83,17 @@ var MinimalistParallax = /** @class */ (function () {
     /**
      * @return {?}
      */
+    MinimalistParallax.prototype.backgroundImg = /**
+     * @return {?}
+     */
+    function () {
+        return {
+            backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url(' + this.image + ')',
+        };
+    };
+    /**
+     * @return {?}
+     */
     MinimalistParallax.prototype.eventsManager = /**
      * @return {?}
      */
@@ -238,7 +249,7 @@ var MinimalistParallax = /** @class */ (function () {
     MinimalistParallax.decorators = [
         { type: core_1.Component, args: [{
                     selector: '[minimalist-parallax]',
-                    template: "\n  <div class=\"over\">\n   <div class=\"bg\"  [ngStyle]=\"{'background-image': 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url()'}\">\n     <!-- <div class=\"child\">\n       <h2>{{ text optional }}</h2>  \n     </div> -->\n   </div>\n  </div>\n  ",
+                    template: "<div class=\"minimalist-parallax over\">\n      <div class=\"bg\" [ngStyle]=\"backgroundImg()\">\n        <div class=\"child\">\n          <h2>{{category}}</h2>\n        </div>\n      </div>\n    </div>",
                     styles: ["\n  over {\n    overflow: hidden;\n    margin-bottom: 10px;\n  }\n  .bg{\n    background-size: cover;\n    background-position: center center;\n  }\n  .banner {\n    position: relative;\n    overflow: hidden;\n  }\n  .main-cnt{\n    width: 100%;\n    height: 70px;\n    overflow: hidden;\n    background-color: #efefef;\n  }\n  \n  .hgroup {\n    padding: 0 20px;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    text-align: center;\n  }\n  h2 {\n    margin-top: 0;\n    margin-bottom: 4px;\n    color: white;\n    font-size: 4vw;\n    font-weight: 600;\n}\n  "],
                     host: {
                         '(ionScroll)': 'onContentScroll($event)',
@@ -250,6 +261,10 @@ var MinimalistParallax = /** @class */ (function () {
         { type: core_1.ElementRef, },
         { type: core_1.Renderer, },
     ]; };
+    MinimalistParallax.propDecorators = {
+        "category": [{ type: core_1.Input },],
+        "image": [{ type: core_1.Input },],
+    };
     return MinimalistParallax;
 }());
 exports.MinimalistParallax = MinimalistParallax;
@@ -261,6 +276,12 @@ function MinimalistParallax_tsickle_Closure_declarations() {
      * @type {function(): !Array<(null|{type: ?, decorators: (undefined|!Array<{type: !Function, args: (undefined|!Array<?>)}>)})>}
      */
     MinimalistParallax.ctorParameters;
+    /** @type {!Object<string,!Array<{type: !Function, args: (undefined|!Array<?>)}>>} */
+    MinimalistParallax.propDecorators;
+    /** @type {?} */
+    MinimalistParallax.prototype.category;
+    /** @type {?} */
+    MinimalistParallax.prototype.image;
     /** @type {?} */
     MinimalistParallax.prototype.backgrounds;
     /** @type {?} */
