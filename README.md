@@ -32,9 +32,9 @@
 
 ## Usage
 
-add the  `parallax` attribute  to the `<ion-content>` in your template:
+add the  `minimalist-parallax` attribute  to the `<ion-content>` in your template:
 ```html
-<ion-content parallax>
+<ion-content minimalist-parallax>
  <div class="over">
   <div class="bg"  [ngStyle]="{'background-image': 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url('+image+')'}">
     <!-- <div class="child">
