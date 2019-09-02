@@ -1,6 +1,6 @@
 {
   "name": "angular-minimalist-parallax",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "If you need more subtlety or just want to get out of the old background-attachment: fixed, get to know the angular-minimalist-parallax",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

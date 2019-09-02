@@ -48,6 +48,13 @@ import { Component, Renderer, ElementRef} from '@angular/core';
     height: 100%;
     text-align: center;
   }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: white;
+    font-size: 4vw;
+    font-weight: 600;
+}
   `],
   host:{
     '(ionScroll)':'onContentScroll($event)',
