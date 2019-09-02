@@ -3,9 +3,9 @@ import { Component, Renderer, ElementRef, Input,} from '@angular/core';
   selector: '[minimalist-parallax]',
   template: 
     `<div class="minimalist-parallax over">
-      <div class="bg" [ngStyle]="{'background-image': 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url('+image+')'}>
+      <div class="bg" [ngStyle]="backgroundImg()">
         <div class="child">
-          <h2>{{ category }}</h2>
+          <h2>{{category}}</h2>
         </div>
       </div>
     </div>`,
@@ -87,6 +87,11 @@ export class MinimalistParallax{
       this.update(ev);
     }
   });
+}
+backgroundImg(){
+    return {
+      backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url('+this.image+')',
+    };
 }
 eventsManager (){
   if(!this.isContentFill){
