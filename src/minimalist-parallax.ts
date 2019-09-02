@@ -1,6 +1,14 @@
-import { Component, Renderer, ElementRef} from '@angular/core';
+import { Component, Renderer, ElementRef, Input,} from '@angular/core';
 @Component({
   selector: '[minimalist-parallax]',
+  template: 
+    `<div class="minimalist-parallax over">
+      <div class="bg" [ngStyle]="{'background-image': 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url('+image+')'}>
+        <div class="child">
+          <h2>{{ category }}</h2>
+        </div>
+      </div>
+    </div>`,
   styles: [`
   over {
     overflow: hidden;
@@ -52,15 +60,19 @@ import { Component, Renderer, ElementRef} from '@angular/core';
   }
 })
 export class MinimalistParallax{
-  constructor(
-    public el:ElementRef,
-    public re: Renderer) {}
+
+  @Input() category: string;
+  @Input() image: string;
+
   backgrounds:any;
   child:any;
   lastScrollTop:number = 0;
   contentWidth:number = 375;
   isContentFill: boolean = false;
   onUpdateContent: boolean = true;
+  
+  constructor(public el:ElementRef,
+              public re: Renderer) {}
 
   ngAfterViewInit(): void {
     setTimeout(() => {
